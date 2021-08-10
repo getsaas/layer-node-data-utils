@@ -24,6 +24,7 @@ __metadata:
     pg: ^8.7.1
     pluralize: ^8.0.0
     rimraf: ^3.0.2
+    semver: ^7.3.5
     sqlite3: ^5.0.2
   languageName: unknown
   linkType: soft
