@@ -1,0 +1,50 @@
+{
+    "name": "@getsaas/layer-node-data-utils",
+    "description": "AWS Lambda utility layer for data manipulation in NodeJS",
+    "version": "0.0.1",
+    "license": "Apache-2.0",
+    "author": {
+        "name": "Sergio Leon",
+        "email": "serge@1nationgfx.com"
+    },
+    "files": [
+        "/lib"
+    ],
+    "main": "./lib/index.js",
+    "scripts": {
+        "clean": "mkdirp dist && rimraf dist/*",
+        "layer": "npm run clean && mkdirp dist/nodejs && cp package.json dist/nodejs/ && cd ./dist/nodejs/ && npm i --prod && cd .. && zip -r layer-node-data-utils.zip ./*",
+        "pub": "yarn npm publish",
+        "major": "yarn version major",
+        "minor": "yarn version minor",
+        "vpatch": "yarn version patch"
+    },
+    "keywords": [
+        "aws",
+        "lambda",
+        "layer",
+        "nestjs",
+        "javascript",
+        "typescript",
+        "nodejs"
+    ],
+    "dependencies": {
+        "bookshelf": "^1.2.0",
+        "change-case": "^4.1.2",
+        "csv": "^5.5.0",
+        "date-fns": "^2.23.0",
+        "js-yaml": "^4.1.0",
+        "knex": "^0.21.20",
+        "lodash": "^4.17.21",
+        "mongoose": "^5.13.6",
+        "mysql2": "^2.3.0",
+        "nanoid": "^3.1.23",
+        "pg": "^8.7.1",
+        "pluralize": "^8.0.0",
+        "sqlite3": "^5.0.2"
+    },
+    "devDependencies": {
+        "mkdirp": "^1.0.4",
+        "rimraf": "^3.0.2"
+    }
+}
